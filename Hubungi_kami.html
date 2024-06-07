@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami - Tokopedia</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-form {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbarr bodyy">
+        <div class="navbar-containerr">
+            <div class="logoo">
+                <a href="index.html">
+                    <img src="img/tokopediaLogo.svg" alt="Logo">
+                </a>                
+            </div>
+            <div class="search-barr">
+                <input type="text" placeholder="Cari di Tokopedia">
+                
+            </div>
+            <div class="navbar-iconss">
+              <a href="Keranjang.html"><img src="img/cart2.svg" alt="Cart"></a>
+              <a href="#"><img src="img/bell.svg" alt="bell"></a>
+              <a href="#"><img src="img/chat-square-dots.svg" alt="Notification"></a>             
+          </div>
+            <div class="navbar-linkss">
+                <a href="#">Kategori</a>
+                <a href="#" onclick="promo()">Promo</a>
+                <a href="#">Login</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Contact Form -->
+    <div class="container contact-form">
+        <h2 class="text-center">Hubungi Kami</h2>
+        <p class="text-center">Jika Anda memiliki pertanyaan atau butuh bantuan, jangan ragu untuk menghubungi kami melalui formulir di bawah ini.</p>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form id="contactForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nama</label>
+                        <input type="text" class="form-control" id="name" placeholder="Masukkan nama Anda" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Masukkan email Anda" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Subjek</label>
+                        <input type="text" class="form-control" id="subject" placeholder="Masukkan subjek pesan Anda" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Pesan</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Masukkan pesan Anda" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Kirim</button>
+                </form>
+                <div id="successMessage" class="alert alert-success mt-3" style="display: none;">
+                    Pesan Anda telah berhasil dikirim. Kami akan menghubungi Anda segera.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="bg-light text-dark pt-5 pb-4">
+        <div class="container text-md-left">
+            <div class="row text-md-left">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Tokopedia</h6>
+                    <p>Tokopedia menyediakan layanan pelanggan yang responsif untuk membantu pengguna dengan pertanyaan atau masalah yang mungkin mereka hadapi. Ini termasuk bantuan melalui email, telepon, atau fitur live chat di platform.</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Produk</h6>
+                    <p>
+                        <a href="#" class="text-dark" style="text-decoration: none;">Elektronik</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-dark" style="text-decoration: none;">Fashion</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-dark" style="text-decoration: none;">Kesehatan</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-dark" style="text-decoration: none;">Olahraga</a>
+                    </p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Perusahaan</h6>
+                    <p>
+                        <a href="#" class="text-dark" style="text-decoration: none;">Tentang Kami</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-dark" style="text-decoration: none;">Karir</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-dark" style="text-decoration: none;">Blog</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-dark" style="text-decoration: none;">Hubungi Kami</a>
+                    </p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Kontak</h6>
+                    <p>
+                        <i class="fas fa-home mr-3"></i> Jakarta, Indonesia
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope mr-3"></i> info@tokopedia.com
+                    </p>
+                    <p>
+                        <i class="fas fa-phone mr-3"></i> +62 852 6866 8045
+                    </p>
+                    <p>
+                        <i class="fas fa-print mr-3"></i> +62 852 6866 8045
+                    </p>
+                </div>
+            </div>
+            <hr class="mb-4">
+    
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p>© 2029 Hak Cipta: <a href="#" style="text-decoration: none;"><strong class="text-dark">Tokopedia</strong></a></p>
+                </div>
+    
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-right">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-dark" style="font-size: 23px;"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-dark" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-dark" style="font-size: 23px;"><i class="fab fa-google-plus-g"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-dark" style="font-size: 23px;"><i class="fab fa-linkedin-in"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-dark" style="font-size: 23px;"><i class="fab fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

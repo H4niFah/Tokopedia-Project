@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bodyy {
+    font-family: Arial, sans-serif;
+}
+
+.navbarr {
+    background-color: rgb(241, 236, 236);
+    padding: 10px 20px;
+}
+
+.navbar-containerr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logoo img {
+    height: 40px;
+}
+
+.search-barr {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin: 0 20px;
+}
+
+.search-barr input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: px 0 0 4px;
+    font-size: 16px;
+}
+
+.search-barr button {
+    padding: 10px;
+    border: none;
+    background-color: #fff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.search-barr button img {
+    height: 12px;
+}
+
+.navbar-linkss a {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    border: none;
+}
+
+.navbar-iconss a {
+    margin-left: 20px;
+}
+
+.navbar-iconss img {
+    height: 24px;
+}
+
+/* Kategori */
+.category-carousel {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 5px 0;
+}
+.category-carousel::-webkit-scrollbar {
+    display: none;
+}
+.category-button {
+    display: inline-block;
+    margin: 0 0px;
+    padding: 10px 20px;
+    background-color: rgb(222, 222, 222);
+    color: black;
+    border-radius: 20px;
+    text-align: center;
+    white-space: normal;
+}
+.category-button:hover {
+    background-color: #45a049;
+}
+.carousel-container {
+    position: relative;
+}
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+}
+.scroll-button.left {
+    left: 0;
+}
+.scroll-button.right {
+    right: 0;
+}
+
+/* content */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.h2c {
+    color: #42b549;
+}
+
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    font-size: 18px;
+    color: #333;
+}
+
+.card-text {
+    font-size: 14px;
+    color: black;
+}
+
+.card-text.text-danger {
+    font-size: 16px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btn-primary {
+    background-color: #42b549;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #399e48;
+}
+
+
+/* Promo style */
+.promo-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.2s;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.promo-card:hover {
+    transform: scale(1.05);
+}
+.promo-card .promo-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.promo-card .promo-description {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+.promo-card .promo-button {
+    margin-top: 20px;
+    background-color: #fff;
+    color: #4CAF50;
+    border: none;
+}
+.promo-card .promo-button:hover {
+    background-color: #45a049;
+    color: #fff;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #f8f9fa;
+    color: #000;
+}
+
+footer a {
+    color: #000;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #42b549;
+    text-decoration: none;
+}
+
+footer .list-inline-item a {
+    font-size: 18px;
+    color: #000;
+    transition: color 0.2s;
+}
+
+footer .list-inline-item a:hover {
+    color: #42b549;
+}
+
+
+     /* Style untuk popup */
+     .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        max-width: 80%;
+        z-index: 9999;
+    }
+
+    .popup-content {
+        text-align: center;
+    }
+
+    .close {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        color: #888;
+    }
+
+    .close:hover {
+        color: #555;
+    }
+
+    .popup-content h2 {
+        color: #333;
+    }
+
+    .popup-content p {
+        color: #666;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        text-decoration: none;
+    }
+
+    .button:hover {
+        background-color: #0056b3;
+    }

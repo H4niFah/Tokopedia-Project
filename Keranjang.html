@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja - Tokopedia</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            margin-top: 30px;
+        }
+        .product-card, .add-product-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #fff;
+        }
+        .product-card img, .add-product-card img {
+            max-width: 100px;
+        }
+        .product-card .btn, .add-product-card .btn {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbarr bodyy">
+        <div class="navbar-containerr">
+            <div class="logoo">
+                <a href="index.html">
+                    <img src="img/tokopediaLogo.svg" alt="Logo">
+                </a>
+                
+            </div>
+            <div class="search-barr">
+                <input type="text" placeholder="Cari di Tokopedia">
+                
+            </div>
+            <div class="navbar-iconss">
+              <a href="Keranjang.html"><img src="img/cart2.svg" alt="Cart"></a>
+              <a href="#"><img src="img/bell.svg" alt="bell"></a>
+              <a href="#"><img src="img/chat-square-dots.svg" alt="Notification"></a>             
+          </div>
+            <div class="navbar-linkss">
+                <a href="#">Kategori</a>
+                <a href="#" onclick="promo()">Promo</a>
+                <a href="#">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Add Product -->
+    <div class="container">
+        <h2 class="text-center">Tambah Produk ke Keranjang</h2>
+        <div id="availableProducts" class="row">
+            <!-- Example products will be injected here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Shopping Cart -->
+    <div class="container">
+        <h2 class="text-center">Keranjang Belanja Anda</h2>
+        <div id="cartItems" class="row">
+            <!-- Product Cards will be injected here by JavaScript -->
+        </div>
+        <div class="text-center mt-4">
+            <button id="checkoutButton" class="btn btn-success">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-dark pt-5 pb-4">
+        <div class="container text-md-left">
+            <div class="row text-md-left">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Tokopedia</h6>
+                    <p>Tokopedia menyediakan layanan pelanggan yang responsif untuk membantu pengguna dengan pertanyaan atau masalah yang mungkin mereka hadapi. Ini termasuk bantuan melalui email, telepon, atau fitur live chat di platform.</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Produk</h6>
+                    <p>
+                        <a href="#" class="text-dark" style="text-decoration: none;">Elektronik</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-dark" style="text-decoration: none;">Fashion</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-dark" style="text-decoration: none;">Kesehatan</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-dark" style="text-decoration: none;">Olahraga</a>
+                    </p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Perusahaan</h6>
+                    <p>
+                        <a href="#" class="text-dark" style="text-decoration: none;">Tentang Kami</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-dark" style="text-decoration: none;">Karir</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-dark" style="text-decoration: none;">Blog</a>
+                    </p>
+                    <p>
+                        <a href="Hubungi_kami.html" class="text-dark" style="text-decoration: none;">Hubungi Kami</a>
+                    </p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Kontak</h6>
+                    <p>
+                        <i class="fas fa-home mr-3"></i> Jakarta, Indonesia
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope mr-3"></i> info@tokopedia.com
+                    </p>
+                    <p>
+                        <i class="fas fa-phone mr-3"></i> +62 852 6866 8045
+                    </p>
+                    <p>
+                        <i class="fas fa-print mr-3"></i> +62 852 6866 8045
+                    </p>
+                </div>
+            </div>
+            <hr class="mb-4">
+    
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p>© 2029 Hak Cipta: <a href="#" style="text-decoration: none;"><strong class="text-dark">Tokopedia</strong></a></p>
+                </div>
+    
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-right">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-dark" style="font-size: 23px;"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-dark" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-dark" style="font-size: 23px;"><i class="fab fa-google-plus-g"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-dark" style="font-size: 23px;"><i class="fab fa-linkedin-in"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-dark" style="font-size: 23px;"><i class="fab fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tambah Produk
+            const availableProducts = [
+                { id: 4, name: 'AMD RYZEN 5 5600G', price: 2_049_000, image: 'img/AMD 5 5600G.jpg' },
+                { id: 5, name: 'Lenovo ThinkPad T480s', price: 1_900_000, image: 'img/Lenovo T480s.jpg' },
+                { id: 6, name: 'HP OMEN TRANSCEND 14', price: 39_600_000, image: 'img/omen1.jpg' }
+            ];
+
+            // Produk yang sudah ada dalam keranjang
+            const cartProducts = [
+                { id: 1, name: 'Razer Basilisk V3', price: 1_199_000, image: 'img/Razer basilisk v3.png' },
+                { id: 2, name: 'KEYBOARD INFORCE', price: 99_000, image: 'img/inforce.jpg' },
+                { id: 3, name: 'HP OMEN TRANSCEND 14', price: 39_600_000, image: 'img/omen1.jpg' }
+            ];
+
+            const availableProductsContainer = document.getElementById('availableProducts');
+            const cartItemsContainer = document.getElementById('cartItems');
+
+            function renderAvailableProducts() {
+                availableProductsContainer.innerHTML = '';
+                availableProducts.forEach(product => {
+                    const productCard = document.createElement('div');
+                    productCard.className = 'col-md-4 add-product-card';
+                    productCard.innerHTML = `
+                        <div class="d-flex align-items-center">
+                            <img src="${product.image}" alt="${product.name}">
+                            <div class="ms-3">
+                                <h5>${product.name}</h5>
+                                <p>Rp ${product.price.toLocaleString()}</p>
+                                <button class="btn btn-primary btn-sm" onclick="addToCart(${product.id})">Tambahkan ke Keranjang</button>
+                            </div>
+                        </div>
+                    `;
+                    availableProductsContainer.appendChild(productCard);
+                });
+            }
+
+            function renderCartItems() {
+                cartItemsContainer.innerHTML = '';
+                cartProducts.forEach(product => {
+                    const productCard = document.createElement('div');
+                    productCard.className = 'col-md-4 product-card';
+                    productCard.innerHTML = `
+                        <div class="d-flex align-items-center">
+                            <img src="${product.image}" alt="${product.name}">
+                            <div class="ms-3">
+                                <h5>${product.name}</h5>
+                                <p>Rp ${product.price.toLocaleString()}</p>
+                                <button class="btn btn-danger btn-sm" onclick="removeFromCart(${product.id})">Hapus</button>
+                            </div>
+                        </div>
+                    `;
+                    cartItemsContainer.appendChild(productCard);
+                });
+            }
+
+            window.addToCart = function(productId) {
+                const product = availableProducts.find(p => p.id === productId);
+                if (product) {
+                    cartProducts.push(product);
+                    renderCartItems();
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        text: 'Produk telah ditambahkan ke keranjang.',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    });
+                }
+            };
+
+            window.removeFromCart = function(productId) {
+                Swal.fire({
+                    title: 'Apakah Anda yakin?',
+                    text: "Anda tidak dapat mengembalikan ini!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Ya, hapus!',
+                    cancelButtonText: 'Batal'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        const index = cartProducts.findIndex(product => product.id === productId);
+                        if (index > -1) {
+                            cartProducts.splice(index, 1);
+                            renderCartItems();
+                            Swal.fire(
+                                'Dihapus!',
+                                'Produk telah dihapus dari keranjang.',
+                                'success'
+                            )
+                        }
+                    }
+                })
+            };
+
+            document.getElementById('checkoutButton').addEventListener('click', function() {
+                Swal.fire({
+                    title: 'Checkout berhasil!',
+                    text: 'Pesanan Anda sedang diproses.',
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                });
+            });
+
+            renderAvailableProducts();
+            renderCartItems();
+        });
+    </script>
+</body>
+</html>

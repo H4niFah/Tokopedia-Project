@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk - Tokopedia</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="produk.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+    <!-- Navbar code would be here -->
+    <nav class="navbarr bodyy">
+        <div class="navbar-containerr">
+            <div class="logoo">
+                <a href="index.html">
+                    <img src="img/tokopediaLogo.svg" alt="Logo">
+                </a>
+                
+            </div>
+            <div class="search-barr">
+                <input type="text" placeholder="Cari di Tokopedia">
+                
+            </div>
+            <div class="navbar-iconss">
+              <a href="Keranjang.html"><img src="img/cart2.svg" alt="Cart"></a>
+              <a href="#"><img src="img/bell.svg" alt="bell"></a>
+              <a href="#"><img src="img/chat-square-dots.svg" alt="Notification"></a>             
+          </div>
+            <div class="navbar-linkss">
+                <a href="#">Kategori</a>
+                <a href="#" onclick="promo()">Promo</a>
+                <a href="#">Login</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Product Detail -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/omen1.jpg" class="d-block w-100" alt="Product Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/omen2.jpg" class="d-block w-100" alt="Product Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/omen3.jpg" class="d-block w-100" alt="Product Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/omen4.jpg" class="d-block w-100" alt="Product Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/omen5.jpg" class="d-block w-100" alt="Product Image">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3 class="fw-bold">HP OMEN TRANSCEND 14 FB0088TX ULTRA 7 155H 16GB 1TB RTX 4050 14" OLED</h3>
+                <p class="text-danger fs-4">Rp39.600.000</p>
+                <p class="text-decoration-line-through">Rp40.000.000</p>
+                <p>Stok: <span id="stock">Tersedia</span></p>
+                <p>Pengiriman: <span id="shipping">Jakarta, Indonesia</span></p>
+                <div class="mb-3">
+                    <button id="buyNowBtn" class="btn btn-success btn-lg me-2">Beli Sekarang</button>
+                    <button id="addToCartBtn" class="btn btn-outline-secondary btn-lg">Tambah ke Keranjang</button>
+                </div>
+                <p class="mt-3">Performa laptop gaming dipadukan dengan sasis logam super ringan , masa pakai baterai yang lebih lama, dan layar HDR OLED 2,8K yang spektakuler. Transcend 14. Segala yang Anda butuhkan untuk bermain dan berkreasi apa pun, di mana pun.</p>
+            </div>
+        </div>
+
+            <div class="mt-5">
+                <ul class="nav nav-tabs" id="productTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab" aria-controls="description" aria-selected="true">Deskripsi</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews" aria-selected="false">Ulasan</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="info-tab" data-bs-toggle="tab" data-bs-target="#info" type="button" role="tab" aria-controls="info" aria-selected="false">Informasi Penting</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="productTabsContent">
+                    <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+                        <p class="mt-3">
+                            <strong>Kondisi:</strong> Baru<br>
+                            <strong>Waktu Preorder:</strong> 45 Hari<br>
+                            <strong>Min. Pemesanan:</strong> 1 Buah<br>
+                            <strong>Etalase:</strong> HP KOMPUTER<br>
+                            <strong>Nama Produk:</strong> HP OMEN TRANSCEND 14 FB0088TX ULTRA 7 155H 16GB 1TB RTX 4050 14" OLED
+                        </p>
+                        <p><strong>Spesifikasi:</strong></p>
+                        <ul>
+                            <li><strong>Usage:</strong> Hybrid Creators, On the Move, Gaming</li>
+                            <li><strong>Color:</strong> Ceramic white aluminum</li>
+                            <li><strong>Processor:</strong> Intel Core Ultra 7 155H (up to 4.8 GHz with Intel Turbo Boost Technology, 24 MB L3 cache, 16 cores, 22 threads) with Intergrated Intel Arc Graphics</li>
+                            <li><strong>Operating System:</strong> Windows 11 Home</li>
+                            <li><strong>Graphics:</strong> NVIDIA GeForce RTX 4050 6 GB GDDR6 dedicated</li>
+                            <li><strong>Storage:</strong> 1 TB PCIe Gen4 NVMe Performance M.2 SSD</li>
+                            <li><strong>Memory:</strong> 16 GB LPDDR5x-7467MHz RAM (onboard)</li>
+                            <li><strong>Display:</strong> 14" diagonal, 2.8K (2880 x 1800), OLED, 48-120 Hz, 0.2 ms response time, UWVA, edge-to-edge glass, micro-edge, Low Blue Light, SDR 400 nits, HDR 500 nits, 100% DCI-P3</li>
+                            <li><strong>Webcam:</strong> HP True Vision 1080p FHD IR camera with dual array digital microphones</li>
+                            <li><strong>Connectivity:</strong> Intel Wi-Fi 7 BE200 (2x2) and Bluetooth 5.4 wireless card</li>
+                        </ul>
+                        <p><strong>Ports:</strong></p>
+                        <ul>
+                            <li>1 Thunderbolt 4 with USB Type-C 40Gbps signaling rate (USB Power Delivery, DisplayPort 1.4, HP Sleep and Charge)</li>
+                            <li>1 USB Type-C 10Gbps signaling rate (USB Power Delivery, DisplayPort 1.4, HP Sleep and Charge)</li>
+                            <li>1 USB Type-A 10Gbps signaling rate (HP Sleep and Charge)</li>
+                            <li>1 USB Type-A 10Gbps signaling rate</li>
+                            <li>1 HDMI 2.1</li>
+                            <li>1 headphone/microphone combo</li>
+                        </ul>
+                        <p><strong>Audio Features:</strong> DTS:X Ultra; HyperX; Dual speakers; HP Audio Boost</p>
+                        <p><strong>Sensors:</strong> IR thermal sensor</p>
+                        <p><strong>Pointing Device:</strong> HP Imagepad</p>
+                        <p><strong>Keyboard:</strong> Full-size, 4-zone RGB backlit, ceramic white keyboard and 26-Key Rollover Anti-Ghosting Key technology</p>
+                        <p><strong>Power Supply Type:</strong> 140 W USB Type-C power adapter</p>
+                        <p><strong>Battery Type:</strong> 6-cell, 71 Wh Li-ion polymer</p>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                        <p class="mt-3"><!-- Reviews Section -->
+                            <div class="container mt-5">
+                                <h2>Ulasan Produk</h2>
+                                <div id="reviews" class="mt-4">
+                                    <div class="review-card">
+                                        <div class="review-header">
+                                            <div>
+                                                <strong>John Doe</strong> - <span class="review-date">1 Juni 2024</span>
+                                            </div>
+                                            <div class="review-rating">
+                                                ★★★★☆
+                                            </div>
+                                        </div>
+                                        <div class="review-body">
+                                            <p>Produk sangat bagus, sesuai dengan deskripsi dan pengiriman cepat. Akan membeli lagi di toko ini.</p>
+                                        </div>
+                                    </div>
+                                    <div class="review-card">
+                                        <div class="review-header">
+                                            <div>
+                                                <strong>Jane Smith</strong> - <span class="review-date">3 Juni 2024</span>
+                                            </div>
+                                            <div class="review-rating">
+                                                ★★★★☆
+                                            </div>
+                                        </div>
+                                        <div class="review-body">
+                                            <p>Barang diterima dalam kondisi baik, kualitas produk sesuai dengan harga yang ditawarkan. Recommended!</p>
+                                        </div>
+                                    </div>
+                                    <div class="review-card">
+                                        <div class="review-header">
+                                            <div>
+                                                <strong>Michael Brown</strong> - <span class="review-date">5 Juni 2024</span>
+                                            </div>
+                                            <div class="review-rating">
+                                                ★★★☆☆
+                                            </div>
+                                        </div>
+                                        <div class="review-body">
+                                            <p>Kualitas produk cukup baik, namun ada sedikit kerusakan pada kemasan. Semoga bisa lebih baik lagi kedepannya.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Additional reviews can be added here -->
+                                </div>
+                            </div></p>
+                    </div>
+                    <div class="tab-pane fade" id="info" role="tabpanel" aria-labelledby="info-tab">
+                        <p class="mt-3">* Batas konfirmasi 1x24 jam.</p>
+                        <p class="mt-3">* Kami akan mengirimkan paket secepatnya setelah order kami proses atau paling lambat 1x24 jam kecuali hari minggu dan hari libur.</p>
+                        <p class="mt-3">* Keterlambatan yang disebabkan oleh kurir bukan tanggung jawab kami.</p>
+                        <p class="mt-3">* Feed back Negatif Garansi Hangus.</p>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Footer code would be here -->
+    <footer class="bg-light text-dark pt-5 pb-4">
+        <div class="container text-md-left">
+            <div class="row text-md-left">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Tokopedia</h6>
+                    <p>Tokopedia menyediakan layanan pelanggan yang responsif untuk membantu pengguna dengan pertanyaan atau masalah yang mungkin mereka hadapi. Ini termasuk bantuan melalui email, telepon, atau fitur live chat di platform.</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Produk</h6>
+                    <p>
+                        <a href="#" class="text-dark" style="text-decoration: none;">Elektronik</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-dark" style="text-decoration: none;">Fashion</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-dark" style="text-decoration: none;">Kesehatan</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-dark" style="text-decoration: none;">Olahraga</a>
+                    </p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Perusahaan</h6>
+                    <p>
+                        <a href="#" class="text-dark" style="text-decoration: none;">Tentang Kami</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-dark" style="text-decoration: none;">Karir</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-dark" style="text-decoration: none;">Blog</a>
+                    </p>
+                    <p>
+                        <a href="Hubungi_kami.html" class="text-dark" style="text-decoration: none;">Hubungi Kami</a>
+                    </p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Kontak</h6>
+                    <p>
+                        <i class="fas fa-home mr-3"></i> Jakarta, Indonesia
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope mr-3"></i> info@tokopedia.com
+                    </p>
+                    <p>
+                        <i class="fas fa-phone mr-3"></i> +62 852 6866 8045
+                    </p>
+                    <p>
+                        <i class="fas fa-print mr-3"></i> +62 852 6866 8045
+                    </p>
+                </div>
+            </div>
+            <hr class="mb-4">
+    
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p>© 2029 Hak Cipta: <a href="#" style="text-decoration: none;"><strong class="text-dark">Tokopedia</strong></a></p>
+                </div>
+    
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-right">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-dark" style="font-size: 23px;"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-dark" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-dark" style="font-size: 23px;"><i class="fab fa-google-plus-g"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-dark" style="font-size: 23px;"><i class="fab fa-linkedin-in"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-dark" style="font-size: 23px;"><i class="fab fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
